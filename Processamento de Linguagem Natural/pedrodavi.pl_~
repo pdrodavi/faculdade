@@ -1,0 +1,81 @@
+pessoa(carlos).
+pessoa(dora).
+pessoa(lia).
+pessoa(lea).
+pessoa(paulo).
+pessoa(juca).
+pessoa(rita).
+pessoa(dito).
+pessoa(pedro).
+pessoa(filhapedro).
+
+ama(carlos, dora).
+ama(dora, lia).
+ama(lia, lea).
+ama(lea, paulo).
+ama(paulo, juca).
+ama(juca, dora).
+ama(dora,_).
+
+ama(dora, rita).
+ama(rita, dito).
+ama(dito, rita).
+
+ama(dora, pedro).
+ama(pedro, filhapedro).
+ama(filhapedro, carlos).
+
+ama(dora,X):- pessoa(X).
+ama(rita,X):- pessoa(X).
+
+sexo(dora, feminino).
+sexo(lia, feminino).
+sexo(lea, feminino).
+sexo(rita, feminino).
+sexo(filhapedro, feminino).
+
+sexo(carlos, masculino).
+sexo(paulo, masculino).
+sexo(juca, masculino).
+sexo(dito, masculino).
+sexo(pedro, masculino).
+
+rivais(X,Y):- ama(X, A), ama(Y,A), (A=A), X\=Y.
+
+casais(A,B):- sexo(A,feminino), sexo(B,masculino), ama(A,B).
+casais(A,B):- sexo(A,masculino), sexo(B,feminino), ama(A,B).
+
+% 2 letra a
+amor(deus).
+cego(amor).
+cego(steve).
+deus(X):- cego(X).
+
+% 2 letra b
+alimento(verdura).
+alimento(peixe).
+animal(elefante).
+animal(baleia).
+emagrecer(dieta).
+dietaresult(engorda).
+
+pessoaemagrecer(X):- emagrecer(X).
+dieta(X):- alimento(X).
+elefantecome(X):- alimento(X), X=verdura.
+baleiacome(X):- alimento(X), X=peixe.
+gordo(X):- animal(X).
+fazerdieta(X):-dietaresult(X).
+%quem pode fazer dieta, aproveitando as mesmas
+%pessoas da questão anterior aplicadas nessa
+fazdieta(X):- pessoa(X).
+%quem não pode fazer dieta
+naofazdieta(X):- animal(X).
+
+queijo(buracos).
+maisqueijo(maisburaco).
+maisqueijo(menosqueijo).
+buraco(lugarqueijo).
+buraco(menosqueijo).
+maisburaco(menosqueijo).
+mais(X):- maisqueijo(X).
+mais(X):- maisburaco(X).

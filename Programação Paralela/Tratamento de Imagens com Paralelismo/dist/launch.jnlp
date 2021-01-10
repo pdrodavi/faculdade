@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>Skin33</title>
+        <vendor>rnsg</vendor>
+        <homepage href=""/>
+        <description>Skin33</description>
+        <description kind="short">Skin33</description>
+    </information>
+    <update check="always"/>
+    <resources>
+        <j2se version="1.8+"/>
+        <jar href="Skin33.jar" main="true"/>
+    <jar href="lib/Jama-1.0.2.jar"/>
+<jar href="lib/commons-math-1.2.jar"/>
+<jar href="lib/fastica-1.11.jar"/>
+<jar href="lib/jai_codec.jar"/>
+<jar href="lib/jai_core.jar"/>
+<jar href="lib/mlibwrapper_jai.jar"/>
+</resources>
+    <application-desc main-class="removeme.TesteImage">
+    </application-desc>
+</jnlp>

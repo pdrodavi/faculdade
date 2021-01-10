@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1020722655574",
+    "firebase_url": "https://acquali.firebaseio.com",
+    "project_id": "acquali",
+    "storage_bucket": "acquali.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020722655574:android:55c3c09b41b3232d",
+        "android_client_info": {
+          "package_name": "rokobasi.com.br.acquali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020722655574-vq9eet0vn1ipc7imib72fcqe5djcbrks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "rokobasi.com.br.acquali",
+            "certificate_hash": "39addaa3b2de8226d5951d4735bcbaa0af2aad29"
+          }
+        },
+        {
+          "client_id": "1020722655574-cs68vj13jps86a1cbb7t59383muotjcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYZvA_5aT3ah5QI2tmbMwZrsjgLco-72s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020722655574-cs68vj13jps86a1cbb7t59383muotjcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

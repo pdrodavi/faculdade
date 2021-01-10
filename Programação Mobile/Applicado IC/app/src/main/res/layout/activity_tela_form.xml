@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaFormActivity">
+
+    <TextView
+        android:id="@+id/tv_nomeatividade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:text="Atividade:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_nomeAtividade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nome da atividade"
+        android:inputType="textPersonName"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
+        android:id="@+id/tv_nomedisciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Disciplina:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_nomeDisciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Disciplina"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp" />
+
+    <TextView
+        android:id="@+id/tv_nomeassunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Assunto:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_nomeAssunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Assunto"
+        android:inputType="textPersonName"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/tv_prazoentrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Prazo de Entrega:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_prazoEntrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Prazo de Entrega"
+        android:inputType="number"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/tv_formadeentrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Forma de Entrega:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_formaEntrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Forma de Entrega"
+        android:inputType="textPersonName"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/tv_anotacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Anotações:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_anotacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Anotações"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="4"
+        android:padding="16dp"
+        android:textAlignment="center" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_variavel"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#800080"
+            android:text="New Button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

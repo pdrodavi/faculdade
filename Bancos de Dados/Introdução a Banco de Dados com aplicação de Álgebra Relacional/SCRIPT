@@ -1,0 +1,55 @@
+CREATE DATABASE loja;
+USE loja;
+CREATE TABLE estado(
+	idestado INT AUTO_INCREMENT,
+	descricao VARCHAR(50) NOT NULL,
+    sigla CHAR(2) NOT NULL,
+	CONSTRAINT pk_idestado PRIMARY KEY(idestado)
+) ENGINE=InnoDB;
+CREATE TABLE cidade(
+   idcidade INT AUTO_INCREMENT,
+   descricao VARCHAR(50) NOT NULL,
+   idestado INT,
+   CONSTRAINT pk_idcidade PRIMARY KEY(idcidade),
+   CONSTRAINT fk_cidade_estado foreign key(idestado) REFERENCES estado(idestado)
+) ENGINE=InnoDB;
+CREATE TABLE cliente(
+	idcliente INT AUTO_INCREMENT,
+	nome VARCHAR(50) NOT NULL,
+	endereco VARCHAR(50) NOT NULL,
+	cpf CHAR(11) NOT NULL,
+	idcidade INT NOT NULL,
+	CONSTRAINT pk_idcliente PRIMARY KEY(idcliente),
+	CONSTRAINT fk_cliente_cidade foreign key(idcidade) REFERENCES cidade(idcidade)
+) ENGINE=InnoDB;
+CREATE TABLE venda(
+	idvenda INT AUTO_INCREMENT,
+	data_venda DATE NOT NULL,
+	desconto NUMERIC(5,2) DEFAULT 0,
+	idcliente INT NOT NULL,
+	CONSTRAINT pk_idvenda PRIMARY KEY(idvenda),
+	CONSTRAINT fk_venda_cliente foreign key(idcliente) REFERENCES cliente(idcliente)
+) ENGINE=InnoDB;
+CREATE TABLE grupo_produto(
+	idgrupo_produto INT AUTO_INCREMENT,
+	descricao varchar(50) NOT NULL,
+	porcentagem_desconto NUMERIC(5,2) DEFAULT 0,
+	CONSTRAINT pk_idgrupo_produto primary key(idgrupo_produto)
+) ENGINE=InnoDB;
+CREATE TABLE produto(
+	idproduto INT AUTO_INCREMENT,
+	descricao VARCHAR(50) NOT NULL,
+	cod_barras VARCHAR(50) NOT NULL,
+	valor_unitario NUMERIC(5,2) DEFAULT 0,
+	quantidade NUMERIC(5,2) DEFAULT 0,
+	idgrupo INT NOT NULL,
+	CONSTRAINT pk_idproduto PRIMARY KEY(idproduto),
+	CONSTRAINT fk_produto_grupo foreign key(idgrupo) REFERENCES grupo_produto(idgrupo_produto)
+) ENGINE=InnoDB;
+CREATE TABLE venda_has_produto(
+	idproduto INT,
+	idvenda INT,
+	CONSTRAINT pk_venda_has_produto PRIMARY KEY(idproduto, idvenda),
+	CONSTRAINT fk_produto foreign key(idproduto) REFERENCES produto(idproduto),
+	CONSTRAINT fk_venda foreign key(idvenda) REFERENCES venda(idvenda)
+) ENGINE=InnoDB;
